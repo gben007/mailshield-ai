@@ -1,0 +1,11 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+.streamlit/
+
+# Local environment files
+.env
+
+# Large training data that should not be pushed to GitHub directly
+combined_data.csv
