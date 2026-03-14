@@ -13,10 +13,13 @@ This project combines natural language preprocessing, sequence modeling, and web
 - Saved tokenizer, label mapping, and config for inference
 - Clean and demo-ready user interface
 - Confidence-based output for predictions
+- Refactored project structure with reusable modules and tests
 
 ## Project Files
 
-- `app.py` - Streamlit frontend for the spam detection app
+- `app.py` - Streamlit entrypoint for the spam detection app
+- `src/mailshield/` - reusable application modules for config, preprocessing, inference, presentation, and UI
+- `tests/` - basic validation tests for preprocessing and presentation logic
 - `gru_model.keras` - trained GRU model
 - `tokenizer.pkl` - saved tokenizer
 - `config.pkl` - sequence configuration used during inference
@@ -30,6 +33,7 @@ This project combines natural language preprocessing, sequence modeling, and web
 - TensorFlow / Keras
 - Streamlit
 - scikit-learn
+- pytest
 - Natural Language Processing (NLP)
 
 ## Setup
@@ -41,6 +45,12 @@ python3.11 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 streamlit run app.py
+```
+
+## Run Tests
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python -m pytest tests
 ```
 
 ## Notes

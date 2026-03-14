@@ -1,3 +1,4 @@
-streamlit>=1.41
-tensorflow>=2.16
-scikit-learn>=1.5
+streamlit==1.55.0
+tensorflow==2.21.0
+scikit-learn==1.8.0
+pytest==8.4.2
